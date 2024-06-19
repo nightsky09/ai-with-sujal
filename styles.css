@@ -1,0 +1,249 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px; /* Adjust max-width for better readability on larger screens */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0000FF, #FF0000, #000);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    z-index: 1;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out; /* Animation for text */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.5s; /* Animation for text with delay */
+}
+
+.hero-button {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 30px; /* Rounded button */
+    animation: fadeInUp 1s ease-out 1s; /* Animation for button with delay */
+}
+
+.hero-button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Section Styling */
+.section {
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0000FF, #FF0000, #000);
+    opacity: 0.8;
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.section .container {
+    text-align: center;
+}
+
+/* Services Section */
+#services {
+    background: #333; /* fallback color */
+}
+
+#services::before {
+    background: linear-gradient(135deg, #0000FF, #FF0000, #000);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjusted opacity */
+    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.service p {
+    font-size: 1em;
+    color: #eee;
+}
+
+/* About Section */
+#about {
+    background: #fff; /* White background */
+}
+
+#about::before {
+    background: none; /* Remove gradient overlay */
+}
+
+#about .container {
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333; /* Adjusted text color */
+    animation: fadeInUp 1s ease-out; /* Animation for text */
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #666; /* Adjusted text color */
+    animation: fadeInUp 1s ease-out 0.5s; /* Animation for text with delay */
+}
+
+/* Contact Section */
+#contact {
+    background: #fff; /* White background */
+}
+
+#contact::before {
+    background: none; /* Remove gradient overlay */
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    display: block;
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 1em
